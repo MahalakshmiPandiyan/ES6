@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Destructing Array</h2>
+<p id="one"></p>
+<script>
+
+let details = [ "mahalakshmi", "pandiyan" ];
+let [ firstName, lastName, gender ] = details;
+document.write(JSON.stringify(firstName));
+document.write("<br>");   
+document.write(JSON.stringify(lastName));
+document.write("<br>");  
+document.write(JSON.stringify(gender));
+document.write("<br>");  
+
+let language=["c","c++","python"];
+let [,,thirdLanguage]=language;
+document.write(JSON.stringify(thirdLanguage));
+document.write("<br>");  
+
+let colors = [ "red", "green", "blue" ];
+let [ firstColor, ...elements ] = colors;
+document.write(JSON.stringify(firstColor));
+document.write("<br>");   
+document.write(JSON.stringify(elements));
+document.write("<br>"); 
+
+let num1= 1,
+    num2= 2;
+
+[ num1, num2 ] = [ num2, num1];
+
+document.write(JSON.stringify(num1));//2
+document.write("<br>");   
+document.write(JSON.stringify(num2));//1
+document.write("<br>"); 
+
+</script>					
+
+</script>
+</body>
+</html>
