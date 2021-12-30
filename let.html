@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>LET</h2>
+
+<p id="one"></p>
+<p id="two"></p>
+<p id="three"></p>
+<p id="four"></p>
+
+<script>   
+
+    let hi= "Hey HIIII";
+    let times = 4;
+    document.getElementById("one").innerHTML = hi;
+    hi="Redeclaring LET";
+    if(times==4)
+    {
+    let hello="Hey HELLO";
+    document.getElementById("two").innerHTML ="let is only available for use within that block : "+hello;
+    }
+    
+    document.getElementById("three").innerHTML =hi;
+    document.getElementById("four").innerHTML =hello;
+    
+</script>
+
+</body>
+</html>
