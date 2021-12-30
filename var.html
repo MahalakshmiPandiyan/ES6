@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>VAR</h2>
+
+<p id="one"></p>
+<p id="two"></p>
+<p id="three"></p>
+<p id="four"></p>
+
+<script>   
+
+    var hi= "Hey HIIII";
+    var times = 4;
+    document.getElementById("one").innerHTML = hi;
+    hi="Redeclaring";
+    if(times==4)
+    {
+    
+    var hello="Hey HELLO";
+
+    document.getElementById("two").innerHTML ="VAR can use both inside and outside the block : "+hello;
+    }
+    
+    document.getElementById("three").innerHTML =hi;
+    document.getElementById("four").innerHTML =hello;
+    
+</script>
+
+</body>
+</html>
