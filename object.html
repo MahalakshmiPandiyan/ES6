@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>ES6 Objects</h2>
+
+<p id="object"></p>
+<p id="objectAdd"></p>
+<p id="objectFor"></p>
+<p id="objectNested"></p>
+<p id="objectMethod"></p>
+<p id="duplicate"></p>
+
+
+<script>
+var details = {
+	firstName:"Maha",
+	lastName:"pandiyan",
+	dob:"23-03-2000",
+	gender:"female"};
+document.getElementById("object").innerHTML = details.firstName + " <br>" + details.dob +"<br> "+details.gender;
+
+details.doj="08-09-2021";
+document.getElementById("objectAdd").innerHTML = details["firstName"] + " <br>" + details["dob"] +"<br> "+details["gender"] +"<br>"+details["doj"];
+
+delete details.gender;
+let output="";
+for(let i in details)
+{
+  output+=details[i] + "<br> ";  
+}
+document.getElementById("objectFor").innerHTML = output;
+
+var personalDetails=
+{
+name:"Maha",
+dob:"23-03-2000",
+gender:"female",
+language:{
+          lan1:"C",
+          lan2:"Java"
+         }
+}
+document.getElementById("objectNested").innerHTML =personalDetails.language.lan2;
+
+details.name=function(){
+  return (this.firstName + " " + this.lastName).toUpperCase();
+}
+document.getElementById("objectMethod").innerHTML =details.name();
+var person = {
+    name: "maha",
+    name: "Mahalakshmi"    
+};
+document.getElementById("duplicate").innerHTML=person.name;
+</script>
+
+</body>
+</html>
