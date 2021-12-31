@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>ES6 Classes</h2>
+
+<script>
+class Details {
+  constructor(firstName, lastName,age) {
+    this.firstName = firstName;
+    this.lastName=lastName;
+    this.age = age;
+  }
+  fullName() {
+    document.write(this.firstName+ this.lastName);
+    document.write("<br>");
+  }
+  static hello(){
+    document.write("Hello");
+    document.write("<br>");
+  }
+}
+
+let myDetails = new Details("Mahalakshmi","Pandiyan", 21);
+myDetails.fullName();
+Details.hello();
+
+class Person{
+  constructor(name){
+    document.write(name+ " Parent Class");
+    document.write("<br>"); 
+  }
+} 
+
+class Employee extends Person{
+    constructor(name){
+      super(name);
+        document.write(name+ " Child Class");
+        document.write("<br>");
+    }
+}
+let employee=new Employee("Mahalakshmi");
+
+
+</script>
+
+</body>
+</html>
